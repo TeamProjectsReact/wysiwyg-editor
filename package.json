@@ -11,7 +11,9 @@
     "url": "git+https://github.com/TeamProjectsReact/wysiwyg-editor.git"
   },
   "keywords": [
-    "ReactJS"
+    "ReactJS",
+    "wysiwyg",
+    "Editor"
   ],
   "author": "JehanKandy",
   "license": "ISC",
