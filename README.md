@@ -3,6 +3,8 @@
 ## About Package
 
 - This is the `what you see is what you get` editor for ReactJS Development
+- This is the Basic of this Editor
+- The Features will added in Future Releases
 
 ## How to use this Package
 
@@ -33,6 +35,17 @@ import {Editor} from 'js-wysiwyg-editor'
 
 ```
 
+- if you are using this with forms
+- change as following 
+
+``` jsx
+<div>
+    <Editor onChange={} value={}/>
+</div>
+
+```
+
+- set the `onChange={}` and ` value={}` according to your need
 
 
 ## Releases
