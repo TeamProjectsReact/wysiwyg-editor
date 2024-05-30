@@ -1,6 +1,18 @@
 # wysiwyg-editor
 
+## About Package
+
 - This is the `what you see is what you get` editor for ReactJS Development
+
+## How to use this Package
+
+- install package via 
+
+``` sh
+
+    npm i js-wysiwyg-editor
+
+```
 
 ## Releases
 
@@ -12,15 +24,7 @@
 - - italic
 - - underLine
 
-## How to use this Package
 
-- install package via 
-
-``` sh
-
-    npm i js-wysiwyg-editor
-
-```
 
 
 ## Releases History
