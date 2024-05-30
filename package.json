@@ -1,0 +1,22 @@
+{
+  "name": "js-wysiwyg-editor",
+  "version": "1.0.0",
+  "description": "wysiwyg Editor for ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamProjectsReact/wysiwyg-editor.git"
+  },
+  "keywords": [
+    "ReactJS"
+  ],
+  "author": "JehanKandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamProjectsReact/wysiwyg-editor/issues"
+  },
+  "homepage": "https://github.com/TeamProjectsReact/wysiwyg-editor#readme"
+}
