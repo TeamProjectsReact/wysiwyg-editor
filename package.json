@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/TeamProjectsReact/wysiwyg-editor/issues"
   },
-  "homepage": "https://github.com/TeamProjectsReact/wysiwyg-editor#readme"
+  "homepage": "https://github.com/TeamProjectsReact/wysiwyg-editor#readme",
+  "dependencies": {
+    "react": "^18.3.1"
+  }
 }
