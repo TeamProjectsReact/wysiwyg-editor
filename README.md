@@ -12,7 +12,15 @@
 - - italic
 - - underLine
 
+## How to use this Package
 
+- install package via 
+
+``` sh
+
+    npm i js-wysiwyg-editor
+
+```
 
 
 ## Releases History
@@ -26,3 +34,4 @@
 
 - [JehanKandy](https://github.com/BackendExpert)
 - [Anupa Gamage](https://github.com/Anupa1998)
+
