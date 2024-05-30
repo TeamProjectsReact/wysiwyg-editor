@@ -24,6 +24,17 @@ import {Editor} from 'js-wysiwyg-editor'
 
 ```
 
+- - Now set the place that you want to use this packge
+
+``` jsx
+<div>
+    <Editor />
+</div>
+
+```
+
+
+
 ## Releases
 
 ### v1.0.0 - 30 May 2024
