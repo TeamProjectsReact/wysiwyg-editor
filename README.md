@@ -14,6 +14,16 @@
 
 ```
 
+- go to location you want to use this Editor
+- in ReactJS 
+- - import Package
+
+``` jsx
+
+import {Editor} from 'js-wysiwyg-editor'
+
+```
+
 ## Releases
 
 ### v1.0.0 - 30 May 2024
