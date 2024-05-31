@@ -5,10 +5,6 @@ const Editor = () => {
     const [outputText, setOutputText] = useState('');
     const textareaRef = useRef(null);
 
-    const handlePreview = () => {
-      setOutputText(inputText);
-    };
-  
     // headle the bold
     const handleBold = () => {
       const textarea = textareaRef.current; // get the current selected area in textarea
@@ -96,7 +92,7 @@ const Editor = () => {
               Preview
             </button>
           <div className="w-full  p-2 bg-white border border-gray-300 rounded-md shadow-sm">
-            <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: outputText.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }}></div>
+            <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: inputText.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }}></div>
           </div>
         </div>
   )
