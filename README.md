@@ -52,12 +52,94 @@ export default TestingPack
 ```
 
 - if you are using this with forms
-- change as following 
+- follow the following exmple
 
 ``` jsx
-<div>
-    <Editor onChange={} value={}/>
-</div>
+import React, { useEffect, useState } from 'react'
+import { Editor } from 'js-wysiwyg-editor'
+import axios from 'axios'
+
+const TestingPack = () => {
+  // send backend
+  const [EditorData, SetEditorData] = useState({
+    title: '',
+  })
+
+  const [text, setText] = useState('');
+
+  // headleSubmit
+
+  const headleSubmit = async (e) => {
+    e.preventDefault()
+
+    try{
+      const res = await axios.post('http://localhost:8081/AddEditorData', {EditorData, text})
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Editor Data Added Successful")
+          window.location.reload()
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+    catch (err) {
+      console.log(err)   
+    }
+  }
+
+  const [GetData, SetGetData] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8081/DisplayData')
+    .then(res => SetGetData(res.data.Result))
+    .catch(err => console.log(err))
+  }, [])
+
+  
+
+  return (
+    <div className='my-8 mx-12'>
+          <form onSubmit={headleSubmit}>
+            <input type="text" name="" id="" className='h-12 bg-gray-200 rounded'
+            onChange={e => SetEditorData({...EditorData, title:e.target.value})}/>
+          
+
+            <div className="">
+              <Editor dataValue={text} OutputTest={setText}/>
+            </div>
+
+
+            <button type="submit" className="py-2 px-8 bg-blue-500 text-white rounded">Submit</button>
+          </form>
+
+
+        <div className="w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm">
+          <div dangerouslySetInnerHTML={{ __html: text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }} />
+        </div>
+        
+       <div className="my-8">
+          <div className="bg-gray-200 rounded py-2 px4">
+            {
+              GetData.map((Data, index) => {
+                return (
+                  <div className="">
+                    <h1 className="">{Data.editor_title}</h1>
+                    <p className="">
+                    <div dangerouslySetInnerHTML={{ __html: Data.editor_data.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }} />
+                    </p>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+    </div>
+  )
+}
+
+export default TestingPack
 
 ```
 
