@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-const Editor = ({ FormValue }) => {
-    const [inputText, setInputText] = useState('');
-    const [outputText, setOutputText] = useState('');
+const Editor = ({ dataValue, OutputTest }) => {
     const textareaRef = useRef(null);
 
     // headle the bold
@@ -13,12 +11,12 @@ const Editor = ({ FormValue }) => {
   
       if (start === end) return; // No text is selected
   
-      const before = inputText.substring(0, start); // get the before string in selection start
-      const selected = inputText.substring(start, end); // get the selected text
-      const after = inputText.substring(end); // last sting of the selection
+      const before = dataValue.substring(0, start); // get the before string in selection start
+      const selected = dataValue.substring(start, end); // get the selected text
+      const after = dataValue.substring(end); // last sting of the selection
   
       const newText = `${before}**${selected}**${after}`; // ** use this for bold text
-      setInputText(newText);
+      OutputTest(newText);
     };
 
         // headle the handleItalic
@@ -29,12 +27,12 @@ const Editor = ({ FormValue }) => {
   
       if (start === end) return; // No text is selected
   
-      const before = inputText.substring(0, start); // get the before string in selection start
-      const selected = inputText.substring(start, end); // get the selected text
-      const after = inputText.substring(end); // last sting of the selection
+      const before = dataValue.substring(0, start); // get the before string in selection start
+      const selected = dataValue.substring(start, end); // get the selected text
+      const after = dataValue.substring(end); // last sting of the selection
   
       const newText = `${before}<i>${selected}</i>${after}`; // ** use this for bold text
-      setInputText(newText);
+      OutputTest(newText);
     };
 
 
@@ -46,12 +44,12 @@ const Editor = ({ FormValue }) => {
   
       if (start === end) return; // No text is selected
   
-      const before = inputText.substring(0, start); // get the before string in selection start
-      const selected = inputText.substring(start, end); // get the selected text
-      const after = inputText.substring(end); // last sting of the selection
+      const before = dataValue.substring(0, start); // get the before string in selection start
+      const selected = dataValue.substring(start, end); // get the selected text
+      const after = dataValue.substring(end); // last sting of the selection
   
       const newText = `${before}<u>${selected}</u>${after}`; // ** use this for bold text
-      setInputText(newText);
+      OutputTest(newText);
     };
 
 
@@ -82,12 +80,9 @@ const Editor = ({ FormValue }) => {
             className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
             rows="20"
             placeholder="Type something here..."
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            value={dataValue}
+            onChange={(e) => OutputTest(e.target.value)}
           ></textarea>
-          <div className="w-full  p-2 bg-white border border-gray-300 rounded-md shadow-sm">
-            <div onChange={FormValue} className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: inputText.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }}></div>
-          </div>
         </div>
   )
 }
