@@ -58,6 +58,13 @@ import {Editor} from 'js-wysiwyg-editor'
 - - italic
 - - underLine
 
+### v1.0.1 - 31 May 2024
+
+- 2nd Version
+- Updating errors
+- - fixing editor data sending to backend
+
+
 
 
 
@@ -65,7 +72,8 @@ import {Editor} from 'js-wysiwyg-editor'
 
 | Version | Release Date |
 |------|-----|
-| v1.0.0 | 30 May - 2024|
+| v1.0.0 | 30 May 2024|
+| v1.0.1 | 31 May 2024|
 
 
 ## Developers and Designers
