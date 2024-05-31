@@ -29,9 +29,7 @@ import {Editor} from 'js-wysiwyg-editor'
 - - Now set the place that you want to use this packge
 
 ``` jsx
-<div>
-    <Editor />
-</div>
+
 
 ```
 
