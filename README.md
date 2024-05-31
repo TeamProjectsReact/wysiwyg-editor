@@ -143,9 +143,6 @@ export default TestingPack
 
 ```
 
-- set the `onChange={}` and ` value={}` according to your need
-
-
 ## Releases
 
 ### v1.0.0 - 30 May 2024
