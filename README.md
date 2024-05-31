@@ -29,7 +29,25 @@ import {Editor} from 'js-wysiwyg-editor'
 - - Now set the place that you want to use this packge
 
 ``` jsx
+import React, { useState } from 'react'
+import { Editor } from 'js-wysiwyg-editor'
+const TestingPack = () => {
 
+  const [text, setText] = useState('');
+
+  return (
+    <div className='my-8 mx-12'>
+        <div className="">
+            <Editor dataValue={text} OutputTest={setText}/>
+        </div>
+        <div className="w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm">
+            <div dangerouslySetInnerHTML={{ __html: text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }} />
+        </div>
+    </div>
+  )
+}
+
+export default TestingPack
 
 ```
 
