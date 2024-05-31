@@ -85,12 +85,6 @@ const Editor = () => {
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           ></textarea>
-            <button
-              className="p-2 mb-4 bg-blue-500 text-white font-semibold rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2"
-              onClick={handlePreview}
-            >
-              Preview
-            </button>
           <div className="w-full  p-2 bg-white border border-gray-300 rounded-md shadow-sm">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: inputText.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }}></div>
           </div>
