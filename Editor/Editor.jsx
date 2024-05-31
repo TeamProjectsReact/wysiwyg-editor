@@ -57,24 +57,24 @@ const Editor = ({ dataValue, OutputTest }) => {
   return (
         <div className="h-auto bg-gray-100 p-4">
            <div className="flex mb-4">
-            <button
+            <button type='button'
               className="p-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
               onClick={handleBold}
             >
               Bold
             </button>
-            {/* <button
+            <button type='button'
               className="mx-4 p-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
               onClick={handleItalic}
             >
               Italic
             </button>
-            <button
+            <button type='button' 
               className="mx-4 p-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
               onClick={handleUnderLine}
             >
               Underline
-            </button> */}
+            </button>
           </div>
           <textarea
             ref={textareaRef}
