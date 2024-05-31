@@ -11,50 +11,51 @@ const Editor = ({ dataValue, OutputTest }) => {
   
       if (start === end) return; // No text is selected
   
-      const before = dataValue.substring(0, start); // get the before string in selection start
-      const selected = dataValue.substring(start, end); // get the selected text
-      const after = dataValue.substring(end); // last sting of the selection
+      const before = value.substring(0, start); // get the before string in selection start
+      const selected = value.substring(start, end); // get the selected text
+      const after = value.substring(end); // last sting of the selection
   
       const newText = `${before}**${selected}**${after}`; // ** use this for bold text
       OutputTest(newText);
     };
 
-        // headle the handleItalic
-    const handleItalic  = () => {
-      const textarea = textareaRef.current; // get the current selected area in textarea
-      const start = textarea.selectionStart; //html textarea input in javascript property (selectionStart) => when user select some charaters in textarea the (selectionStart) is the starting point of the selection
-      const end = textarea.selectionEnd; //html textarea input in javascript property (selectionEnd) => when user select some charaters in textarea the (selectionStart) is the ending point of the selection
+
+    //     // headle the handleItalic
+    // const handleItalic  = () => {
+    //   const textarea = textareaRef.current; // get the current selected area in textarea
+    //   const start = textarea.selectionStart; //html textarea input in javascript property (selectionStart) => when user select some charaters in textarea the (selectionStart) is the starting point of the selection
+    //   const end = textarea.selectionEnd; //html textarea input in javascript property (selectionEnd) => when user select some charaters in textarea the (selectionStart) is the ending point of the selection
   
-      if (start === end) return; // No text is selected
+    //   if (start === end) return; // No text is selected
   
-      const before = dataValue.substring(0, start); // get the before string in selection start
-      const selected = dataValue.substring(start, end); // get the selected text
-      const after = dataValue.substring(end); // last sting of the selection
+    //   const before = dataValue.substring(0, start); // get the before string in selection start
+    //   const selected = dataValue.substring(start, end); // get the selected text
+    //   const after = dataValue.substring(end); // last sting of the selection
   
-      const newText = `${before}<i>${selected}</i>${after}`; // ** use this for bold text
-      OutputTest(newText);
-    };
+    //   const newText = `${before}<i>${selected}</i>${after}`; // ** use this for bold text
+    //   OutputTest(newText);
+    // };
 
 
-    // headle the handleItalic
-    const handleUnderLine  = () => {
-      const textarea = textareaRef.current; // get the current selected area in textarea
-      const start = textarea.selectionStart; //html textarea input in javascript property (selectionStart) => when user select some charaters in textarea the (selectionStart) is the starting point of the selection
-      const end = textarea.selectionEnd; //html textarea input in javascript property (selectionEnd) => when user select some charaters in textarea the (selectionStart) is the ending point of the selection
+    // // headle the handleItalic
+    // const handleUnderLine  = () => {
+    //   const textarea = textareaRef.current; // get the current selected area in textarea
+    //   const start = textarea.selectionStart; //html textarea input in javascript property (selectionStart) => when user select some charaters in textarea the (selectionStart) is the starting point of the selection
+    //   const end = textarea.selectionEnd; //html textarea input in javascript property (selectionEnd) => when user select some charaters in textarea the (selectionStart) is the ending point of the selection
   
-      if (start === end) return; // No text is selected
+    //   if (start === end) return; // No text is selected
   
-      const before = dataValue.substring(0, start); // get the before string in selection start
-      const selected = dataValue.substring(start, end); // get the selected text
-      const after = dataValue.substring(end); // last sting of the selection
+    //   const before = dataValue.substring(0, start); // get the before string in selection start
+    //   const selected = dataValue.substring(start, end); // get the selected text
+    //   const after = dataValue.substring(end); // last sting of the selection
   
-      const newText = `${before}<u>${selected}</u>${after}`; // ** use this for bold text
-      OutputTest(newText);
-    };
+    //   const newText = `${before}<u>${selected}</u>${after}`; // ** use this for bold text
+    //   OutputTest(newText);
+    // };
 
 
   return (
-        <div className="min-h-screen bg-gray-100 p-4">
+        <div className="h-auto bg-gray-100 p-4">
            <div className="flex mb-4">
             <button
               className="p-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -62,7 +63,7 @@ const Editor = ({ dataValue, OutputTest }) => {
             >
               Bold
             </button>
-            <button
+            {/* <button
               className="mx-4 p-2 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
               onClick={handleItalic}
             >
@@ -73,7 +74,7 @@ const Editor = ({ dataValue, OutputTest }) => {
               onClick={handleUnderLine}
             >
               Underline
-            </button>
+            </button> */}
           </div>
           <textarea
             ref={textareaRef}
