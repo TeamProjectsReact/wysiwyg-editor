@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-const Editor = () => {
+const Editor = ({ FormValue }) => {
     const [inputText, setInputText] = useState('');
     const [outputText, setOutputText] = useState('');
     const textareaRef = useRef(null);
@@ -86,7 +86,7 @@ const Editor = () => {
             onChange={(e) => setInputText(e.target.value)}
           ></textarea>
           <div className="w-full  p-2 bg-white border border-gray-300 rounded-md shadow-sm">
-            <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: inputText.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }}></div>
+            <div onChange={FormValue} className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: inputText.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') }}></div>
           </div>
         </div>
   )
