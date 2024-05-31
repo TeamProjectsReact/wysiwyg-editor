@@ -11,9 +11,9 @@ const Editor = ({ dataValue, OutputTest }) => {
   
       if (start === end) return; // No text is selected
   
-      const before = value.substring(0, start); // get the before string in selection start
-      const selected = value.substring(start, end); // get the selected text
-      const after = value.substring(end); // last sting of the selection
+      const before = dataValue.substring(0, start); // get the before string in selection start
+      const selected = dataValue.substring(start, end); // get the selected text
+      const after = dataValue.substring(end); // last sting of the selection
   
       const newText = `${before}**${selected}**${after}`; // ** use this for bold text
       OutputTest(newText);
